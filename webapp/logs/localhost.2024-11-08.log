@@ -1,0 +1,612 @@
+08-Nov-2024 22:32:37.769 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 role = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 role = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [26] in the jsp file: [/home.jsp]
+user cannot be resolved to a variable
+23:     <!-- Menu Drawer -->
+24:     <div id="drawer" class="drawer">
+25:         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
+26:         <% if (user != null) { %>
+27:                     <% if (user.getRole() == 0) { %>
+28:                         <h3>Chức năng Quản lý</h3>
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+
+
+An error occurred at line: [27] in the jsp file: [/home.jsp]
+user cannot be resolved
+24:     <div id="drawer" class="drawer">
+25:         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
+26:         <% if (user != null) { %>
+27:                     <% if (user.getRole() == 0) { %>
+28:                         <h3>Chức năng Quản lý</h3>
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+30:                         <a href="viewReaderReports.jsp">Xem Báo cáo Bạn đọc</a>
+
+
+An error occurred at line: [32] in the jsp file: [/home.jsp]
+user cannot be resolved
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+30:                         <a href="viewReaderReports.jsp">Xem Báo cáo Bạn đọc</a>
+31:                         <a href="viewSupplierReports.jsp">Xem Báo cáo Nhà cung cấp</a>
+32:                     <% } else if (user.getRole() == 1) { %>
+33:                         <h3>Chức năng Nhân viên</h3>
+34:                         <a href="addDocument.jsp">Thêm Tài liệu</a>
+35:                         <a href="searchDocument.jsp">Tìm kiếm Tài liệu</a>
+
+
+An error occurred at line: [39] in the jsp file: [/home.jsp]
+user cannot be resolved
+36:                         <a href="borrowDocument.jsp">Mượn Tài liệu</a>
+37:                         <a href="returnDocument.jsp">Trả Tài liệu</a>
+38:                         <a href="manageSuppliers.jsp">Quản lý Nhà cung cấp</a>
+39:                     <% } else if (user.getRole() == 2) { %>
+40:                         <h3>Chức năng Bạn đọc</h3>
+41:                         <a href="registerReader.jsp">Đăng ký Làm thẻ Bạn đọc</a>
+42:                         <a href="searchForDocument.jsp">Tìm kiếm Tài liệu</a>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:662)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
+		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:934)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1698)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+08-Nov-2024 22:32:37.769 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.LoginServlet669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 role = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 role = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [26] in the jsp file: [/home.jsp]
+user cannot be resolved to a variable
+23:     <!-- Menu Drawer -->
+24:     <div id="drawer" class="drawer">
+25:         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
+26:         <% if (user != null) { %>
+27:                     <% if (user.getRole() == 0) { %>
+28:                         <h3>Chức năng Quản lý</h3>
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+
+
+An error occurred at line: [27] in the jsp file: [/home.jsp]
+user cannot be resolved
+24:     <div id="drawer" class="drawer">
+25:         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
+26:         <% if (user != null) { %>
+27:                     <% if (user.getRole() == 0) { %>
+28:                         <h3>Chức năng Quản lý</h3>
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+30:                         <a href="viewReaderReports.jsp">Xem Báo cáo Bạn đọc</a>
+
+
+An error occurred at line: [32] in the jsp file: [/home.jsp]
+user cannot be resolved
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+30:                         <a href="viewReaderReports.jsp">Xem Báo cáo Bạn đọc</a>
+31:                         <a href="viewSupplierReports.jsp">Xem Báo cáo Nhà cung cấp</a>
+32:                     <% } else if (user.getRole() == 1) { %>
+33:                         <h3>Chức năng Nhân viên</h3>
+34:                         <a href="addDocument.jsp">Thêm Tài liệu</a>
+35:                         <a href="searchDocument.jsp">Tìm kiếm Tài liệu</a>
+
+
+An error occurred at line: [39] in the jsp file: [/home.jsp]
+user cannot be resolved
+36:                         <a href="borrowDocument.jsp">Mượn Tài liệu</a>
+37:                         <a href="returnDocument.jsp">Trả Tài liệu</a>
+38:                         <a href="manageSuppliers.jsp">Quản lý Nhà cung cấp</a>
+39:                     <% } else if (user.getRole() == 2) { %>
+40:                         <h3>Chức năng Bạn đọc</h3>
+41:                         <a href="registerReader.jsp">Đăng ký Làm thẻ Bạn đọc</a>
+42:                         <a href="searchForDocument.jsp">Tìm kiếm Tài liệu</a>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 role = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 role = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [26] in the jsp file: [/home.jsp]
+user cannot be resolved to a variable
+23:     <!-- Menu Drawer -->
+24:     <div id="drawer" class="drawer">
+25:         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
+26:         <% if (user != null) { %>
+27:                     <% if (user.getRole() == 0) { %>
+28:                         <h3>Chức năng Quản lý</h3>
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+
+
+An error occurred at line: [27] in the jsp file: [/home.jsp]
+user cannot be resolved
+24:     <div id="drawer" class="drawer">
+25:         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
+26:         <% if (user != null) { %>
+27:                     <% if (user.getRole() == 0) { %>
+28:                         <h3>Chức năng Quản lý</h3>
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+30:                         <a href="viewReaderReports.jsp">Xem Báo cáo Bạn đọc</a>
+
+
+An error occurred at line: [32] in the jsp file: [/home.jsp]
+user cannot be resolved
+29:                         <a href="viewBorrowingReports.jsp">Xem Báo cáo Mượn tài liệu</a>
+30:                         <a href="viewReaderReports.jsp">Xem Báo cáo Bạn đọc</a>
+31:                         <a href="viewSupplierReports.jsp">Xem Báo cáo Nhà cung cấp</a>
+32:                     <% } else if (user.getRole() == 1) { %>
+33:                         <h3>Chức năng Nhân viên</h3>
+34:                         <a href="addDocument.jsp">Thêm Tài liệu</a>
+35:                         <a href="searchDocument.jsp">Tìm kiếm Tài liệu</a>
+
+
+An error occurred at line: [39] in the jsp file: [/home.jsp]
+user cannot be resolved
+36:                         <a href="borrowDocument.jsp">Mượn Tài liệu</a>
+37:                         <a href="returnDocument.jsp">Trả Tài liệu</a>
+38:                         <a href="manageSuppliers.jsp">Quản lý Nhà cung cấp</a>
+39:                     <% } else if (user.getRole() == 2) { %>
+40:                         <h3>Chức năng Bạn đọc</h3>
+41:                         <a href="registerReader.jsp">Đăng ký Làm thẻ Bạn đọc</a>
+42:                         <a href="searchForDocument.jsp">Tìm kiếm Tài liệu</a>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:662)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
+		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:934)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1698)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+08-Nov-2024 22:33:04.716 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:662)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
+		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:934)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1698)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+08-Nov-2024 22:33:04.716 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.LoginServlet669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:662)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
+		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:934)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1698)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+08-Nov-2024 22:34:09.268 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:662)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
+		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:934)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1698)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+08-Nov-2024 22:34:09.268 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.LoginServlet669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+An error occurred at line: [3] in the jsp file: [/home.jsp]
+User669 cannot be resolved to a type
+1: <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+2: <%
+3:     User669 user = (User669) session.getAttribute("user");
+4: %>
+5: 
+6: <!DOCTYPE html>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:662)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
+		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:934)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1698)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
