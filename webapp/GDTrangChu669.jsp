@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="model.User669" %>
+<%@ page import="model.NguoiDung669" %>
 <%
-    User669 user = (User669) session.getAttribute("user");
+    NguoiDung669 user = (NguoiDung669) session.getAttribute("user");
 %>
 
 <!DOCTYPE html>
@@ -24,24 +24,24 @@
     <!-- Menu Drawer -->
     <div id="drawer" class="drawer">
         <a href="javascript:void(0)" onclick="toggleDrawer()">Đóng &times;</a>
-        <a href="home.jsp">Trang chủ</a>
+        <a href="GDTrangChu669.jsp">Trang chủ</a>
         <hr>
         <% if (user != null) { %>
-                    <% if (user.getRole() == 0) { %>
+                    <% if (user.getChucvu() == 2) { %>
                         <h3>Chức năng Quản lý</h3>
                         <a>Xem thống kê các tài liệu theo số lần mượn</a>
                         <a>Xem thống kê các độc giả theo số lượng mượn</a>
                         <a href="viewSupplierReports.jsp">Xem thống kê nhà cung cấp theo số lượng tài liệu nhâp</a>
-                    <% } else if (user.getRole() == 1) { %>
+                    <% } else if (user.getChucvu() == 1) { %>
                         <h3>Chức năng Nhân viên</h3>
                         <a>Thêm Tài liệu</a>
                         <a>Tìm kiếm Tài liệu</a>
                         <a>Mượn Tài liệu</a>
                         <a>Trả Tài liệu</a>
                         <a>Quản lý Nhà cung cấp</a>
-                    <% } else if (user.getRole() == 2) { %>
+                    <% } else if (user.getChucvu() == 0) { %>
                         <h3>Chức năng Bạn đọc</h3>
-                        <a href="registerReader/registerReader.jsp">Đăng ký Làm thẻ Bạn đọc</a>
+                        <a href="GDDangKiLamTheBanDoc669.jsp">Đăng ký Làm thẻ Bạn đọc</a>
                         <a>Tìm kiếm Tài liệu</a>
                         <a>Mượn Tài liệu</a>
                         <a>Trả Tài liệu</a>
@@ -51,7 +51,7 @@
 
     <!-- Nội dung Chính -->
     <div id="main-content" class="main-content">
-        <h2>Chào mừng, <%= user != null ? user.getName() : "Khách" %>!</h2>
+        <h2>Chào mừng, <%= user != null ? user.getTen() : "Khách" %>!</h2>
         <p>Chọn một chức năng từ menu để bắt đầu.</p>
     </div>
 

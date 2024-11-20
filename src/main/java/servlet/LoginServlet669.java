@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.UserDao669;
-import model.User669;
+import dao.LoginDao669;
+import model.NguoiDung669;
 
 @WebServlet("/LoginServlet669")
 public class LoginServlet669 extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private static UserDao669 userDao = new UserDao669();
+    private static LoginDao669 userDao = new LoginDao669();
     
     public LoginServlet669() {
         super();
@@ -27,11 +27,11 @@ public class LoginServlet669 extends HttpServlet {
         
         if (userDao.isValidUser(username, password)) {
             HttpSession session = request.getSession();
-            User669 user = userDao.getUser(username, password);
+            NguoiDung669 user = userDao.getUser(username, password);
 
             session.setAttribute("user", user);
 
-            request.getRequestDispatcher("home.jsp").forward(request, response);
+            request.getRequestDispatcher("GDTrangChu669.jsp").forward(request, response);
         } else {
             response.sendRedirect("login.jsp?error=1");
         }

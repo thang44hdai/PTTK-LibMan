@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import database.DBConnection669;
-import model.User669;
+import model.NguoiDung669;
 
-public class UserDao669 {
+public class LoginDao669 {
 
     public boolean isValidUser(String username, String password) {
-        String query = "SELECT * FROM user669 WHERE username = ? AND password = ?";
+        String query = "SELECT * FROM tblnguoidung669 WHERE tk = ? AND mk = ?";
         try (Connection connection = DBConnection669.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
@@ -27,8 +27,8 @@ public class UserDao669 {
         }
     }
 
-    public User669 getUser(String username, String password) {
-        String query = "SELECT * FROM user669 WHERE username = ? AND password = ?";
+    public NguoiDung669 getUser(String username, String password) {
+        String query = "SELECT * FROM tblnguoidung669 WHERE tk = ? AND mk = ?";
         try (Connection connection = DBConnection669.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
@@ -38,18 +38,18 @@ public class UserDao669 {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                User669 user = new User669();
-                user.setUserId(resultSet.getString("user_id"));
-                user.setUsername(resultSet.getString("username"));
-                user.setPassword(resultSet.getString("password"));
-                user.setName(resultSet.getString("name"));
-                user.setRole(resultSet.getInt("role"));
+                NguoiDung669 user = new NguoiDung669();
+                user.setId(resultSet.getInt("id"));
+                user.setTk(resultSet.getString("tk"));
+                user.setMk(resultSet.getString("mk"));
+                user.setTen(resultSet.getString("ten"));
+                user.setChucvu(resultSet.getInt("chucvu"));
                 return user;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return new User669();
+        return new NguoiDung669();
     }
 
 
