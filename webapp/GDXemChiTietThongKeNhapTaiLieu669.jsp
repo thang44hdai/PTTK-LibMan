@@ -47,9 +47,7 @@
     <div id="main-content" class="main-content">
         <!-- Thông tin nhà cung cấp -->
         <h2>Thông Tin Nhà Cung Cấp</h2>
-        <%
-            if (nhaCungCap != null) {
-        %>
+        <% if (nhaCungCap != null) { %>
             <table border="1" style="width: 100%; margin-bottom: 20px; border-collapse: collapse;">
                 <tr>
                     <th>ID Nhà Cung Cấp</th>
@@ -68,13 +66,9 @@
                     <td><%= nhaCungCap.getSdt() %></td>
                 </tr>
             </table>
-        <%
-            } else {
-        %>
+        <% } else { %>
             <p style="color: red;">Không tìm thấy thông tin nhà cung cấp.</p>
-        <%
-            }
-        %>
+        <% } %>
 
         <!-- Khoảng thời gian lọc -->
         <h2>Khoảng Thời Gian Lọc</h2>
@@ -83,9 +77,7 @@
 
         <!-- Bảng chi tiết phiếu nhập tài liệu -->
         <h2>Chi Tiết Phiếu Nhập Tài Liệu</h2>
-        <%
-            if (danhSachPhieuNhap != null && !danhSachPhieuNhap.isEmpty()) {
-        %>
+        <% if (danhSachPhieuNhap != null && !danhSachPhieuNhap.isEmpty()) { %>
             <table border="1" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
                 <thead>
                     <tr>
@@ -96,7 +88,7 @@
                 </thead>
                 <tbody>
                     <% for (PhieuNhapTaiLieu669 phieuNhap : danhSachPhieuNhap) { %>
-                        <tr>
+                        <tr onclick="directToDetail('<%= phieuNhap.getId() %>')">
                             <td><%= phieuNhap.getId() %></td>
                             <td><%= phieuNhap.getNgayNhap() %></td>
                             <td><%= phieuNhap.getNhanVienId() %></td>
@@ -104,22 +96,22 @@
                     <% } %>
                 </tbody>
             </table>
-        <%
-            } else {
-        %>
+        <% } else { %>
             <p>Không có phiếu nhập tài liệu nào trong khoảng thời gian được chọn.</p>
-        <%
-            }
-        %>
+        <% } %>
     </div>
 
     <script>
         function toggleDrawer() {
             const drawer = document.getElementById('drawer');
             const mainContent = document.getElementById('main-content');
-
             drawer.classList.toggle('drawer-open');
             mainContent.classList.toggle('content-shift');
+        }
+
+        function directToDetail(phieuNhapId) {
+            // Chuyển hướng tới servlet XemChiTietHoaDonNhapCtr669
+            window.location.href = 'XemChiTietHoaDonNhapCtr669?phieuNhapId=' + phieuNhapId;
         }
     </script>
 
