@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.LoginDao669;
+import dao.DangNhapDao669;
 import model.NguoiDung669;
 
-@WebServlet("/LoginServlet669")
-public class LoginServlet669 extends HttpServlet {
+@WebServlet("/DangNhapCtr669")
+public class DangNhapCtr669 extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private static LoginDao669 userDao = new LoginDao669();
+    private static DangNhapDao669 userDao = new DangNhapDao669();
     
-    public LoginServlet669() {
+    public DangNhapCtr669() {
         super();
     }
 
@@ -27,7 +27,7 @@ public class LoginServlet669 extends HttpServlet {
         
         if (userDao.isValidUser(username, password)) {
             HttpSession session = request.getSession();
-            NguoiDung669 user = userDao.getUser(username, password);
+            NguoiDung669 user = userDao.getNguoiDung(username, password);
 
             session.setAttribute("user", user);
 

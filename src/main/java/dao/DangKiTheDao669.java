@@ -4,16 +4,13 @@ import database.DBConnection669;
 import model.TheBanDoc669;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.time.LocalDate;
 
-public class RegisterReaderDao669 {
+public class DangKiTheDao669 {
 
     // Lưu thông tin thẻ bạn đọc vào cơ sở dữ liệu
-    public boolean saveRegisterReader(TheBanDoc669 theBanDoc669) {
+    public boolean luuDangKi(TheBanDoc669 theBanDoc669) {
         String query = "INSERT INTO tblthebandoc669 (tblBanDoc669tblNguoiDung669id, ngayDangKi, ngayHetHan) VALUES (?, ?, ?)";
         try (Connection connection = DBConnection669.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {

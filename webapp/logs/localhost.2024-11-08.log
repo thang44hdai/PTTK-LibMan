@@ -86,7 +86,7 @@ Stacktrace:
 		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
 		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
 		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
-		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at servlet.DangNhapCtr669.doPost(LoginServlet669.java:34)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
@@ -111,7 +111,7 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1623)
-08-Nov-2024 22:32:37.769 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.LoginServlet669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP: 
+08-Nov-2024 22:32:37.769 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.DangNhapCtr669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP:
 
 An error occurred at line: [3] in the jsp file: [/home.jsp]
 User669 cannot be resolved to a type
@@ -265,7 +265,7 @@ Stacktrace:
 		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
 		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
 		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
-		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at servlet.DangNhapCtr669.doPost(LoginServlet669.java:34)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
@@ -334,7 +334,7 @@ Stacktrace:
 		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
 		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
 		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
-		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at servlet.DangNhapCtr669.doPost(LoginServlet669.java:34)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
@@ -359,7 +359,7 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1623)
-08-Nov-2024 22:33:04.716 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.LoginServlet669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP: 
+08-Nov-2024 22:33:04.716 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.DangNhapCtr669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP:
 
 An error occurred at line: [3] in the jsp file: [/home.jsp]
 User669 cannot be resolved to a type
@@ -425,7 +425,7 @@ Stacktrace:
 		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
 		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
 		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
-		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at servlet.DangNhapCtr669.doPost(LoginServlet669.java:34)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
@@ -494,7 +494,7 @@ Stacktrace:
 		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
 		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
 		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
-		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at servlet.DangNhapCtr669.doPost(LoginServlet669.java:34)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
@@ -519,7 +519,7 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1623)
-08-Nov-2024 22:34:09.268 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.LoginServlet669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP: 
+08-Nov-2024 22:34:09.268 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [servlet.DangNhapCtr669] in context with path [/LibManManagement] threw exception [Unable to compile class for JSP:
 
 An error occurred at line: [3] in the jsp file: [/home.jsp]
 User669 cannot be resolved to a type
@@ -585,7 +585,7 @@ Stacktrace:
 		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:428)
 		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:360)
 		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:297)
-		at servlet.LoginServlet669.doPost(LoginServlet669.java:34)
+		at servlet.DangNhapCtr669.doPost(LoginServlet669.java:34)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:515)
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)

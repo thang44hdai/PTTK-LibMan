@@ -1,6 +1,6 @@
 package servlet;
 
-import dao.RegisterReaderDao669;
+import dao.DangKiTheDao669;
 import model.TheBanDoc669;
 
 import javax.servlet.ServletException;
@@ -12,9 +12,9 @@ import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
 
-@WebServlet("/RegisterReaderServlet669")
-public class RegisterReaderServlet669 extends HttpServlet {
-    private static final RegisterReaderDao669 readerDao669 = new RegisterReaderDao669();
+@WebServlet("/DangKiTheCtr669")
+public class DangKiTheCtr669 extends HttpServlet {
+    private static final DangKiTheDao669 readerDao669 = new DangKiTheDao669();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -32,7 +32,7 @@ public class RegisterReaderServlet669 extends HttpServlet {
 
             // Tạo đối tượng và lưu
             TheBanDoc669 theBanDoc669 = new TheBanDoc669(id, sqlRegisterDate, sqlExpiryDate);
-            boolean success = readerDao669.saveRegisterReader(theBanDoc669);
+            boolean success = readerDao669.luuDangKi(theBanDoc669);
 
             if (success) {
                 request.setAttribute("status", "success");

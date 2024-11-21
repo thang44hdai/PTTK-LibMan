@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <form action="LoginServlet669" method="post">
+        <form action="DangNhapCtr669" method="post">
             <label for="username">UserName:</label>
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label>

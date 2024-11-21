@@ -50,7 +50,7 @@
 
     <div id="main-content" class="main-content">
         <h2>Đăng ký Làm thẻ Bạn đọc</h2>
-        <form action="RegisterReaderServlet669" method="post">
+        <form action="DangKiTheCtr669" method="post">
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" value="<%= user != null ? user.getId() : "" %>" readonly>
 

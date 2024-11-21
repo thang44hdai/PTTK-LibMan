@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import database.DBConnection669;
 import model.NguoiDung669;
 
-public class LoginDao669 {
+public class DangNhapDao669 {
 
     public boolean isValidUser(String username, String password) {
         String query = "SELECT * FROM tblnguoidung669 WHERE tk = ? AND mk = ?";
@@ -27,7 +27,7 @@ public class LoginDao669 {
         }
     }
 
-    public NguoiDung669 getUser(String username, String password) {
+    public NguoiDung669 getNguoiDung(String username, String password) {
         String query = "SELECT * FROM tblnguoidung669 WHERE tk = ? AND mk = ?";
         try (Connection connection = DBConnection669.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
