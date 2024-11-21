@@ -46,6 +46,8 @@
         <a>Tìm kiếm Tài liệu</a>
         <a>Mượn Tài liệu</a>
         <a>Trả Tài liệu</a>
+        <hr>
+        <a href="login.jsp">Đăng xuất</a>
     </div>
 
     <div id="main-content" class="main-content">

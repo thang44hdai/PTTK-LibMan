@@ -44,7 +44,9 @@
                         <a>Mượn Tài liệu</a>
                         <a>Trả Tài liệu</a>
                     <% } %>
-                <% } %>
+        <% } %>
+        <hr>
+        <a href="login.jsp">Đăng xuất</a>
     </div>
 
     <!-- Nội dung Chính -->

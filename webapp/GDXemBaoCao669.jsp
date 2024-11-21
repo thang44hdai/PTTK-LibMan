@@ -29,6 +29,8 @@
         <hr>
          <h3>Chức năng Quản lý</h3>
          <a href="GDXemBaoCao669.jsp">Xem Báo Cáo</a>
+         <hr>
+         <a href="login.jsp">Đăng xuất</a>
     </div>
 
     <div id="main-content" class="main-content">

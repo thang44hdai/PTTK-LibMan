@@ -54,6 +54,8 @@
         <hr>
         <h3>Chức năng Quản lý</h3>
         <a href="GDXemBaoCao669.jsp">Xem Báo Cáo</a>
+        <hr>
+        <a href="login.jsp">Đăng xuất</a>
     </div>
 
     <div id="main-content" class="main-content">
@@ -85,7 +87,7 @@
                         <th>Tên Nhà Cung Cấp</th>
                         <th>Địa Chỉ</th>
                         <th>Số Điện Thoại</th>
-                        <th>Số Lượng Tài Liệu Nhập</th>
+                        <th>Số Lần Nhập</th>
                     </tr>
                 </thead>
                 <tbody>
