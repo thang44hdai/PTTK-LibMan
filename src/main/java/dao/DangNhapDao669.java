@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import database.DBConnection669;
 import model.NguoiDung669;
+import model.NhaCungCap669;
 
 public class DangNhapDao669 {
 
@@ -52,5 +53,41 @@ public class DangNhapDao669 {
         return new NguoiDung669();
     }
 
+    NhaCungCap669 getNhaCungCapById(int nhaCungCapId, Connection connection) throws SQLException {
+        String query = "SELECT * FROM tblNhaCungCap669 WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, nhaCungCapId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return new NhaCungCap669(
+                        resultSet.getInt("id"),
+                        resultSet.getString("ten"),
+                        resultSet.getString("diachi"),
+                        resultSet.getString("sdt")
+                );
+            }
+        }
+        return null;
+    }
+
+    NguoiDung669 getNhanVienById(int nhanVienId, Connection connection) throws SQLException {
+        String query = "SELECT * FROM tblNguoiDung669 WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, nhanVienId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return new NguoiDung669(
+                        resultSet.getInt("id"),
+                        resultSet.getString("tk"),
+                        resultSet.getString("mk"),
+                        resultSet.getString("ten"),
+                        resultSet.getInt("chucvu")
+                );
+            }
+        }
+        return null;
+    }
 
 }

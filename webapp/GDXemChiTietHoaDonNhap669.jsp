@@ -64,7 +64,7 @@
             </table>
 
             <!-- Danh sách tài liệu -->
-            <h3>Danh Sách Tài Liệu</h3>
+            <h3>Danh Sách Tài Liệu Nhập</h3>
             <%
                 if (danhSachTaiLieu != null && !danhSachTaiLieu.isEmpty()) {
             %>

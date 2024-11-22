@@ -11,6 +11,7 @@ import database.DBConnection669;
 import model.*;
 
 public class XemChiTietHoaDonNhapDao669 {
+    private DangNhapDao669 userDao = new DangNhapDao669();
 
     // Lấy thông tin phiếu nhập chi tiết (bao gồm tài liệu, nhà cung cấp, nhân viên)
     public PhieuNhapChiTiet669 getChiTietPhieuNhapById(int phieuNhapId) {
@@ -34,15 +35,15 @@ public class XemChiTietHoaDonNhapDao669 {
                     chiTietPhieuNhap.setNgayNhap(phieuNhap.getNgayNhap());
 
                     // Lấy thông tin nhà cung cấp
-                    chiTietPhieuNhap.setNhaCungCap(getNhaCungCapById(phieuNhap.getNhaCungCapId(), connection));
+                    chiTietPhieuNhap.setNhaCungCap(userDao.getNhaCungCapById(phieuNhap.getNhaCungCapId(), connection));
 
                     // Lấy thông tin nhân viên
-                    chiTietPhieuNhap.setNguoiDung(getNhanVienById(phieuNhap.getNhanVienId(), connection));
+                    chiTietPhieuNhap.setNguoiDung(userDao.getNhanVienById(phieuNhap.getNhanVienId(), connection));
                 }
             }
 
             // Lấy danh sách tài liệu trong phiếu nhập từ bảng tblPhieuNhapTaiLieuChiTiet669
-            List<TaiLieu669> danhSachTaiLieu = getDanhSachTaiLieuByPhieuNhapId(phieuNhapId, connection);
+            List<TaiLieu669> danhSachTaiLieu = getDanhSachTaiLieuByPhieuNhapId(phieuNhapId);
             chiTietPhieuNhap.setDanhSachTaiLieu(danhSachTaiLieu);
 
         } catch (SQLException e) {
@@ -52,66 +53,31 @@ public class XemChiTietHoaDonNhapDao669 {
         return chiTietPhieuNhap;
     }
 
-    // Lấy thông tin nhà cung cấp theo ID
-    private NhaCungCap669 getNhaCungCapById(int nhaCungCapId, Connection connection) throws SQLException {
-        String query = "SELECT * FROM tblNhaCungCap669 WHERE id = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, nhaCungCapId);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                return new NhaCungCap669(
-                        resultSet.getInt("id"),
-                        resultSet.getString("ten"),
-                        resultSet.getString("diachi"),
-                        resultSet.getString("sdt")
-                );
-            }
-        }
-        return null;
-    }
-
-    // Lấy thông tin nhân viên theo ID
-    private NguoiDung669 getNhanVienById(int nhanVienId, Connection connection) throws SQLException {
-        String query = "SELECT * FROM tblNguoiDung669 WHERE id = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, nhanVienId);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                return new NguoiDung669(
-                        resultSet.getInt("id"),               // ID
-                        resultSet.getString("tk"),           // Tên tài khoản (tk)
-                        resultSet.getString("mk"),           // Mật khẩu (mk)
-                        resultSet.getString("ten"),          // Tên nhân viên (ten)
-                        resultSet.getInt("chucvu")           // Chức vụ (chucvu)
-                );
-            }
-        }
-        return null;
-    }
-
-
     // Lấy danh sách tài liệu trong phiếu nhập
-    private List<TaiLieu669> getDanhSachTaiLieuByPhieuNhapId(int phieuNhapId, Connection connection) throws SQLException {
+    private List<TaiLieu669> getDanhSachTaiLieuByPhieuNhapId(int phieuNhapId) throws SQLException {
         List<TaiLieu669> danhSachTaiLieu = new ArrayList<>();
-        String query = "SELECT tl.* FROM tblPhieuNhapTaiLieuChiTiet669 pntc "
-                + "JOIN tblTaiLieu669 tl ON pntc.tblTaiLieu669id = tl.id "
-                + "WHERE pntc.tblPhieuNhapTaiLieu669id = ?";
 
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, phieuNhapId);
-            ResultSet resultSet = preparedStatement.executeQuery();
+        try (Connection connection = DBConnection669.getConnection()) {
+            String query = "SELECT tl.* FROM tblPhieuNhapTaiLieuChiTiet669 pntc "
+                    + "JOIN tblTaiLieu669 tl ON pntc.tblTaiLieu669id = tl.id "
+                    + "WHERE pntc.tblPhieuNhapTaiLieu669id = ?";
 
-            while (resultSet.next()) {
-                TaiLieu669 taiLieu = new TaiLieu669();
-                taiLieu.setId(resultSet.getInt("id"));
-                taiLieu.setTen(resultSet.getString("ten"));
-                taiLieu.setTacgia(resultSet.getString("tacgia"));
-                taiLieu.setNamXB(resultSet.getInt("namXB"));
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setInt(1, phieuNhapId);
+                ResultSet resultSet = preparedStatement.executeQuery();
 
-                danhSachTaiLieu.add(taiLieu);
+                while (resultSet.next()) {
+                    TaiLieu669 taiLieu = new TaiLieu669();
+                    taiLieu.setId(resultSet.getInt("id"));
+                    taiLieu.setTen(resultSet.getString("ten"));
+                    taiLieu.setTacgia(resultSet.getString("tacgia"));
+                    taiLieu.setNamXB(resultSet.getInt("namXB"));
+
+                    danhSachTaiLieu.add(taiLieu);
+                }
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return danhSachTaiLieu;
     }

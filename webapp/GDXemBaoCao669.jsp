@@ -36,12 +36,6 @@
     <div id="main-content" class="main-content">
         <h2>Xem báo cáo</h2>
     <div style="margin-top: 20px;">
-            <button onclick="alert('Chức năng Xem Thống kê các tài liệu theo số lượng nhập chưa được triển khai!')">
-                Xem Thống kê các tài liệu theo số lượng nhập
-            </button>
-            <button onclick="alert('Chức năng Xem thống kê độc giả chưa được triển khai!')">
-                Xem thống kê độc giả
-            </button>
             <button onclick="location.href='GDThongKeNhaCungCap669.jsp'">
                 Xem thống kê nhà cung cấp theo số lượng nhập
             </button>

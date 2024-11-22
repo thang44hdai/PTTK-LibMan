@@ -43,9 +43,6 @@
         <hr>
         <h3>Chức năng Bạn đọc</h3>
         <a href="GDDangKiLamTheBanDoc669.jsp">Đăng ký Làm thẻ Bạn đọc</a>
-        <a>Tìm kiếm Tài liệu</a>
-        <a>Mượn Tài liệu</a>
-        <a>Trả Tài liệu</a>
         <hr>
         <a href="login.jsp">Đăng xuất</a>
     </div>
